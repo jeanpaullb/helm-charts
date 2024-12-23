@@ -1,0 +1,27 @@
+{{- if eq (.Values.enabled | toString) "true" }}
+{{- if eq (.Values.pv.enabled | toString) "true" }}
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: {{ .Values.pv.name | default "etcd-backup" }}
+  labels:
+    {{- include "tpl.labels" $ | nindent 4 }}
+spec:
+  persistentVolumeReclaimPolicy: {{ .Values.pv.reclaimPolicy | default "Retain" }}
+  capacity:
+    storage:  {{ .Values.pv.size| default "100Gi"  }}
+  accessModes:
+    - {{ .Values.pv.accessMode | default "ReadWriteOnce" }}
+  storageClassName: {{ .Values.pv.storageClass | default "ReadWriteOnce" | quote }}
+  nfs:
+    path: {{ .Values.pv.path }}
+    server: {{ .Values.pv.server }}
+  {{- if .Values.pv.mountOptions }}
+  mountOptions:
+  {{- range .Values.pv.mountOptions }} 
+     - {{ . }}
+  {{- end }}
+  {{- end }}
+{{- end }}
+{{- end }}
