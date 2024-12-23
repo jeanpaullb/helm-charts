@@ -30,4 +30,4 @@ dependencies:
   #   condition: helper-status-checker.enabled
   - name: tpl
     version: ~1.0.0
-    repository: git@github.com:jeanpaullb/helm-charts.git
+    repository: http://server1.labjp.xyz:8080/
