@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: {{ .Values.rbac.execAccessRoleBindingName } | default exec-access-binding}
+  namespace: openshift-etcd
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: {{ .Values.rbac.execAccessRoleName }}
+subjects:
+- kind: ServiceAccount
+  name: {{ .Values.rbac.serviceAccountName }}
+  namespace: {{ .Values.cronJob.namespace }}

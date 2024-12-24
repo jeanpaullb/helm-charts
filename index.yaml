@@ -20,14 +20,14 @@ entries:
         fingerprint: B677CB52F8358FA091044E375D24D6846DBA8F8A
         url: https://keys.openpgp.org/vks/v1/by-fingerprint/B677CB52F8358FA091044E375D24D6846DBA8F8A
     apiVersion: v2
-    created: "2024-12-23T16:32:03.461015512-05:00"
+    created: "2024-12-23T16:48:48.624232339-05:00"
     dependencies:
     - name: tpl
-      repository: http://server1.labjp.xyz:8080/
+      repository: https://helm1.labjp.xyz:8443/helm-charts/
       version: ~1.0.0
     description: A helper Chart to reduce code repetition. This Chart should be called
       as a dependency by other charts in order to install Operators.
-    digest: d72618e0dcaad2a97caa29833c6f552186e5679b0d2a84190a19f07e91faf499
+    digest: d30f786e639619f7d0fe04438151e4366f624d2e6c795ca87dececc3728e0fe3
     home: https://github.com/tjungbauer/helm-charts/tree/main/charts/helper-operator
     icon: https://github.com/tjungbauer/helm-charts/raw/gh-pages/images/helping.png
     keywords:
@@ -44,7 +44,7 @@ entries:
     - https://charts.stderr.at/
     - https://github.com/tjungbauer/openshift-clusterconfig-gitops
     urls:
-    - http://server1.labjp.xyz:8080/helper-operator-1.0.28.tgz
+    - https://helm1.labjp.xyz:8443/helm-charts/helper-operator-1.0.28.tgz
     version: 1.0.28
   helper-status-checker:
   - annotations:
@@ -68,7 +68,7 @@ entries:
         fingerprint: B677CB52F8358FA091044E375D24D6846DBA8F8A
         url: https://keys.openpgp.org/vks/v1/by-fingerprint/B677CB52F8358FA091044E375D24D6846DBA8F8A
     apiVersion: v2
-    created: "2024-12-23T16:32:03.461634358-05:00"
+    created: "2024-12-23T16:48:48.624812525-05:00"
     dependencies:
     - name: tpl
       repository: https://charts.stderr.at/
@@ -76,7 +76,7 @@ entries:
     description: A helper Chart that creates a job to verify if the deployments of
       an operator are running. To do so it creates a service account with a role to
       read the status of the Deployments.
-    digest: 2af4d9a2203f5ef32dba0eeecb7b5e78474cd4b3285b929a8c0d43fd1d2f6da3
+    digest: 2dfb5ae6d548210bb57550f63452b30b68274ecf1d64b474c08ee2030240cd4c
     home: https://github.com/tjungbauer/helm-charts/tree/main/charts/helper-status-checker
     icon: https://github.com/tjungbauer/helm-charts/raw/gh-pages/images/helping.png
     keywords:
@@ -92,7 +92,7 @@ entries:
     - https://charts.stderr.at/
     - https://github.com/tjungbauer/openshift-clusterconfig-gitops
     urls:
-    - http://server1.labjp.xyz:8080/helper-status-checker-4.0.13.tgz
+    - https://helm1.labjp.xyz:8443/helm-charts/helper-status-checker-4.0.13.tgz
     version: 4.0.13
   tpl:
   - annotations:
@@ -112,10 +112,10 @@ entries:
         fingerprint: B677CB52F8358FA091044E375D24D6846DBA8F8A
         url: https://keys.openpgp.org/vks/v1/by-fingerprint/B677CB52F8358FA091044E375D24D6846DBA8F8A
     apiVersion: v2
-    created: "2024-12-23T16:32:03.461894942-05:00"
+    created: "2024-12-23T16:48:48.625571738-05:00"
     description: A library that shall collect certain templates to reuse them among
       different charts.
-    digest: 6f73c26d92ea519c93580a6792bd2cce4f9238fb19d21660ca3cba1680235cc5
+    digest: 7ba1150352b10581ddc93dbb5f9610154fdfc7bba80571cdc1d5bd9ce33d213a
     home: https://github.com/tjungbauer/helm-charts/tree/main/charts/tpl
     icon: https://github.com/tjungbauer/helm-charts/raw/gh-pages/images/template.png
     keywords:
@@ -132,21 +132,21 @@ entries:
     - https://charts.stderr.at/
     - https://github.com/tjungbauer/openshift-clusterconfig-gitops
     urls:
-    - http://server1.labjp.xyz:8080/tpl-1.0.15.tgz
+    - https://helm1.labjp.xyz:8443/helm-charts/tpl-1.0.15.tgz
     version: 1.0.15
   webterminal:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-12-23T16:32:03.462361016-05:00"
+    created: "2024-12-23T16:48:48.626034799-05:00"
     dependencies:
     - name: tpl
-      repository: http://server1.labjp.xyz:8080/
+      repository: https://helm1.labjp.xyz:8443/helm-charts/
       version: ~1.0.0
     description: A Helm chart for Kubernetes
     digest: 39fc2462c695ac06640e77eb7a20436617a7223dea48cb908901f96ab5037c03
     name: webterminal
     type: application
     urls:
-    - http://server1.labjp.xyz:8080/webterminal-0.1.0.tgz
+    - https://helm1.labjp.xyz:8443/helm-charts/webterminal-0.1.0.tgz
     version: 0.1.0
-generated: "2024-12-23T16:32:03.460088578-05:00"
+generated: "2024-12-23T16:48:48.623285573-05:00"

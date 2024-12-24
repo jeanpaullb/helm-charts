@@ -1,0 +1,9 @@
+cronJob:
+  schedule: "0 2 * * *"
+  namespace: kube-system
+
+rbac:
+  serviceAccountName: default
+  podAccessRoleBindingName: pod-access-binding
+  execAccessRoleBindingName: exec-access-binding
+  execAccessRoleName: exec-access

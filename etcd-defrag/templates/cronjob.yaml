@@ -1,0 +1,30 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: etcd-defrag
+  namespace: {{ .Values.cronJob.namespace | default "kube-system" }}
+spec:
+  schedule: {{ .Values.cronJob.schedule | quote }}
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: etcd-defrag
+            image: image-registry.openshift-image-registry.svc:5000/openshift/cli:latest
+            command:
+            - /bin/sh
+            - -c
+            - |
+              echo \"Iniciando desfragmentación en clúster SNO...\"
+              POD=$(oc get pod -n openshift-etcd -l k8s-app=etcd -o jsonpath='{.items[0].metadata.name}')
+              echo \"Pod etcd identificado: $POD\"
+              echo \"Desactivando variable ETCDCTL_ENDPOINTS\"
+              oc rsh -n openshift-etcd $POD sh -c \"unset ETCDCTL_ENDPOINTS && etcdctl --command-timeout=30s --endpoints=https://localhost:2379 defrag\"
+              echo \"Desfragmentación completada en $POD\"
+          restartPolicy: OnFailure
+          volumes:
+          - name: kubeconfig
+            hostPath:
+              path: /root/.kube
+              type: Directory

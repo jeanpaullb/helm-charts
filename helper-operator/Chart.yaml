@@ -11,7 +11,7 @@ maintainers:
 dependencies:
   - name: tpl
     version: ~1.0.0
-    repository: http://server1.labjp.xyz:8080/
+    repository: https://helm1.labjp.xyz:8443/helm-charts/
 sources:
   - https://github.com/tjungbauer/helm-charts
   - https://charts.stderr.at/

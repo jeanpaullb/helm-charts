@@ -1,0 +1,21 @@
+apiVersion: v2
+name: etcd-defrag
+version: 0.1.0
+description: Helm Chart para configurar un CronJob que realiza la desfragmentación de etcd en OpenShift
+
+dependencies: []
+
+keywords:
+  - etcd
+  - defrag
+  - OpenShift
+  - CronJob
+
+maintainers:
+  - name: Jean Paul
+    email: jealopez@redhat.com
+
+sources:
+  - https://github.com/tu-repo/etcd-defrag-chart
+
+home: https://example.com/etcd-defrag

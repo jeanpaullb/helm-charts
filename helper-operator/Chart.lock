@@ -1,6 +1,6 @@
 dependencies:
 - name: tpl
-  repository: http://server1.labjp.xyz:8080/
+  repository: https://helm1.labjp.xyz:8443/helm-charts/
   version: 1.0.15
-digest: sha256:9409600fbeeae83e2b4d81c619c09abdc7d4360ff9df54026e3a9a7ff54586b7
-generated: "2024-12-23T16:31:03.944609918-05:00"
+digest: sha256:4695d3767eab843473e989e4c46da6d8d0b42d11deb906f2321ad4aa94c29f93
+generated: "2024-12-23T17:40:40.269521396-05:00"
